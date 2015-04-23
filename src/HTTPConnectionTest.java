@@ -1,10 +1,15 @@
-import java.io.BufferedInputStream;
-import java.io.InputStream;
-import java.io.RandomAccessFile;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+/**
+ * 
+ * @author ytzys
+ * 
+ *         ≤‚ ‘url «∑Òø…”√
+ * 
+ */
 
 public class HTTPConnectionTest {
 	public static void main(String[] args) {

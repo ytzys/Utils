@@ -1,11 +1,17 @@
 import java.io.File;
 
+/**
+ * 
+ * @author ytzys
+ * 
+ *         查找按顺序编号的文件，缺少哪一个
+ */
 public class FileCounter {
 	public static void main(String[] args) {
-		String path = "c:/53891530884";
+		String path = "C:\\Documents and Settings\\Administrator\\桌面\\542161461764";
 		File file = new File(path);
 		File[] files = file.listFiles();
-		int segCount = 951;
+		int segCount = 333;
 		boolean[] result = new boolean[segCount];
 		for (File tmp : files) {
 
