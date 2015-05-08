@@ -1,3 +1,4 @@
+package singleton;
 public class SingletonTest {
 	static SingletonTest instance;
 
