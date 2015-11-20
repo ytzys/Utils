@@ -32,7 +32,7 @@ class DownloadThread extends Thread {
 					"yyyy-MM-dd, HH:mm:ss");
 			long startTime = System.currentTimeMillis();
 			while (true) {
-				String httpUrl = "http://video.cdn.baidupcs.com/video/videotrannb/cb5ac7a7d5b6f9dffaf5f38667206c951074?to=vcb&range=0-14099&xcode=070f508ffb58553b83f21cedeb69d7ac6ff38904bfcecad80b2977702d3e6764&fid=96642a12612a9d0ad0ac15593c8ab78e-993835394&len=14100&time=1429013635&r=418240815&sign=BOUTHNF-F3530edecde9cd71b79378b290804a96-P0dlakQA1jGCGQKdVpKWZhNjIqg%253D&sta_dx=1824&sta_cs=273&app_id=250528&logid=4178240224&region=ningbo";
+				String httpUrl = "http://video.cdn.baidupcs.com/video/netdisk-videotran-ningbo/e43d7f01d5ce3420537019e5c4da4fb8_1074_1_ts?to=vcb&range=1021592-1716815&xcode=46c8358ff1068ed4b0c4cb08d6c262dd1ac7c8e46c2b77000b2977702d3e6764&fid=cb5825aad2a81b02a391f7992f186c55-3040860618&ouk=3040860618&len=695224&time=1436521556&r=303224952&sign=BOUTHNF-F3530edecde9cd71b79378b290804a96-%252FFY1f%252BsJfnAGWnMkzhtD8oJl4Q0%253D&sta_dx=1911&sta_cs=18905&app_id=250528&logid=869146140&region=ningbo";
 				URL url = new URL(httpUrl);
 				HttpURLConnection conn = (HttpURLConnection) url
 						.openConnection();
@@ -44,13 +44,15 @@ class DownloadThread extends Thread {
 				// "AppleCoreMedia/1.0.0.9B206 (iPad; U; CPU OS 5_1_1 like Mac OS X; zh_cn)");
 				int status = conn.getResponseCode();
 				String curTime = format.format(new Date());
+				System.out.println("currentTimeMillis:"
+						+ System.currentTimeMillis());
 				System.out.println("curTime:" + curTime + " status: " + status);
-				if (status != 200) {
-					long timeCost = System.currentTimeMillis() - startTime;
-					System.out.println("total costed time:" + timeCost);
-					break;
-				}
-				sleep(10000);
+				// if (status != 200) {
+				// long timeCost = System.currentTimeMillis() - startTime;
+				// System.out.println("total costed time:" + timeCost);
+				// break;
+				// }
+				sleep(2000);
 			}
 			// InputStream is;
 			// int readBytes;
